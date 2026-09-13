@@ -1,0 +1,20 @@
+{
+  "scope": {
+    "copyrighted_work": true,
+    "copyright_use_occurs": true
+  },
+  "conditions": {
+    "information_analysis": true,
+    "other_non_enjoyment_purpose": false,
+    "enjoyment_of_target_work": false,
+    "coexisting_enjoyment_purpose": false,
+    "intentional_reproduction_output_purpose": false,
+    "frequent_common_expression_outputs_observed": true,
+    "frequent_outputs_attributable_to_user_similarity_prompts": false,
+    "within_necessary_extent": true,
+    "unreasonably_prejudices_rightsholder": false
+  },
+  "context": {
+    "note": "Outputs sharing creative expression with learned works are stated to occur markedly frequently without attribution to user similarity prompting. This is indirect evidence and routes to REVIEW, not DENY."
+  }
+}
