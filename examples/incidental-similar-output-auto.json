@@ -1,0 +1,19 @@
+{
+  "scope": {
+    "copyrighted_work": true,
+    "copyright_use_occurs": true
+  },
+  "conditions": {
+    "information_analysis": true,
+    "other_non_enjoyment_purpose": false,
+    "enjoyment_of_target_work": false,
+    "coexisting_enjoyment_purpose": false,
+    "intentional_reproduction_output_purpose": false,
+    "incidental_similar_output_observed": true,
+    "within_necessary_extent": true,
+    "unreasonably_prejudices_rightsholder": false
+  },
+  "context": {
+    "note": "A generation-stage output happened to resemble a training work, but training was not intentionally aimed at reproducing it. Per the Agency's guidance this alone does not establish an enjoyment purpose at the training stage."
+  }
+}
