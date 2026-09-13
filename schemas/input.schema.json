@@ -1,0 +1,227 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/jp-copyright-30-4/input.schema.json",
+  "title": "JP Copyright Article 30-4 Gate Input",
+  "type": "object",
+  "required": [
+    "scope",
+    "conditions"
+  ],
+  "properties": {
+    "scope": {
+      "type": "object",
+      "required": [
+        "copyrighted_work",
+        "copyright_use_occurs"
+      ],
+      "properties": {
+        "copyrighted_work": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "copyright_use_occurs": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "conditions": {
+      "type": "object",
+      "required": [
+        "enjoyment_of_target_work",
+        "coexisting_enjoyment_purpose",
+        "within_necessary_extent",
+        "unreasonably_prejudices_rightsholder"
+      ],
+      "properties": {
+        "information_analysis": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "other_non_enjoyment_purpose": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "enjoyment_of_target_work": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "coexisting_enjoyment_purpose": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "General/manual fallback for a coexisting enjoyment purpose. Prefer the more specific intentional_reproduction_output_purpose when the Agency's illustrative fact pattern applies."
+        },
+        "intentional_reproduction_output_purpose": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "True if the use intentionally aims to have a model, RAG/vector database, or other derived system later output the whole or part of creative expression contained in the works used. Examples include additional training intentionally aimed at outputting creative expression contained in the training works, or vectorizing works for a RAG system designed to output that expression. This field concerns creative expression, not mere similarity of unprotected style or ideas."
+        },
+        "incidental_similar_output_observed": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "True if a generation/use-stage output sharing creative expression with a learned work was observed as an isolated or incidental event. This fact alone does not establish training-stage enjoyment purpose. Use frequent_common_expression_outputs_observed for marked frequency."
+        },
+        "frequent_common_expression_outputs_observed": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "True if outputs sharing creative expression with learned works are observed to occur markedly frequently. The Agency identifies marked frequency as one possible indirect fact when inferring training-stage enjoyment purpose; this signal routes to REVIEW unless the frequency is attributed to users intentionally prompting for similar works."
+        },
+        "frequent_outputs_attributable_to_user_similarity_prompts": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "For a marked-frequency case, true if the frequency is attributable to users intentionally prompting for works similar to existing works. The Agency notes that such user-caused frequency does not itself support an inference that the AI trainer had an enjoyment purpose."
+        },
+        "within_necessary_extent": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "unreasonably_prejudices_rightsholder": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "description": "Compact acquisition record retained for backward compatibility. For richer provenance, also use the optional provenance object.",
+      "properties": {
+        "uri": {
+          "type": "string"
+        },
+        "acquired_at": {
+          "type": "string"
+        },
+        "acquisition_method": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Optional operator-supplied provenance manifest. The gate preserves this record but does not independently verify its truth or use its mere presence/absence as an Article 30-4 statutory element.",
+      "properties": {
+        "schema_version": {
+          "type": "string"
+        },
+        "content_hash": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        },
+        "source_uri": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "acquired_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "acquisition_method": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "collector": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "declared_license": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rights_holder_claim": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "retrieval_receipt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "parent_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "known_pirated_source": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "ai_training_market_dataset": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
