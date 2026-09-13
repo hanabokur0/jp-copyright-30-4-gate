@@ -1,0 +1,68 @@
+{
+  "receipt_id": "6740fac5-c1d3-47aa-a34a-7d1b8615e5b1",
+  "receipt_type": "jp-copyright-30-4-gate-receipt",
+  "created_at": "2026-09-13T00:00:00.000Z",
+  "jurisdiction": "JP",
+  "policy": {
+    "id": "jp-copyright-article-30-4",
+    "version": "0.1.2",
+    "legal_basis": "Japan Copyright Act Article 30-4"
+  },
+  "input_hash": "sha256:5845abd8e93073c355fa042b9ad1598cb3be211468f07ef9afe527d18177628b",
+  "decision": "AUTO",
+  "basis": "ARTICLE_30_4_PROFILE_SATISFIED",
+  "findings": [
+    {
+      "code": "NON_ENJOYMENT_PURPOSE",
+      "result": "PASS",
+      "message": "No enjoyment purpose for the target work is stated.",
+      "legal_effect": "informational"
+    },
+    {
+      "code": "NO_COEXISTING_ENJOYMENT_PURPOSE",
+      "result": "PASS",
+      "message": "No coexisting enjoyment purpose is stated.",
+      "legal_effect": "informational"
+    },
+    {
+      "code": "INFORMATION_ANALYSIS",
+      "result": "PASS",
+      "message": "The stated purpose includes information analysis, a statutory example of non-enjoyment use.",
+      "legal_effect": "informational"
+    },
+    {
+      "code": "WITHIN_NECESSARY_EXTENT",
+      "result": "PASS",
+      "message": "The use is stated to remain within the extent considered necessary.",
+      "legal_effect": "informational"
+    },
+    {
+      "code": "NO_UNREASONABLE_PREJUDICE_STATED",
+      "result": "PASS",
+      "message": "No unreasonable prejudice to the copyright holder's interests is stated.",
+      "legal_effect": "informational"
+    }
+  ],
+  "evidence_refs": [
+    "evidence://source-snapshot/001"
+  ],
+  "source_record": {
+    "uri": "https://example.com/dataset-item",
+    "acquired_at": "2026-09-13T00:00:00Z",
+    "acquisition_method": "public-web"
+  },
+  "provenance_manifest": {
+    "schema_version": "0.1",
+    "content_hash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "source_uri": "https://example.com/dataset-item",
+    "acquired_at": "2026-09-13T00:00:00Z",
+    "acquisition_method": "public-web",
+    "source_type": "public_web",
+    "collector": "example-crawler-v0.1",
+    "declared_license": null,
+    "rights_holder_claim": null,
+    "retrieval_receipt": "evidence://source-snapshot/001",
+    "parent_refs": []
+  },
+  "disclaimer": "This is a deterministic routing result under a narrow Article 30-4 policy profile, not a legal opinion or a conclusion that an activity is lawful or unlawful. It evaluates supplied facts and does not discover or prove the training data of any AI model."
+}
