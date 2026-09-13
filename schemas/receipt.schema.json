@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/jp-copyright-30-4/receipt.schema.json",
+  "title": "JP Copyright Article 30-4 Gate Receipt",
+  "type": "object",
+  "required": [
+    "receipt_id",
+    "receipt_type",
+    "created_at",
+    "jurisdiction",
+    "policy",
+    "input_hash",
+    "decision",
+    "basis",
+    "findings",
+    "evidence_refs",
+    "source_record",
+    "provenance_manifest",
+    "disclaimer"
+  ],
+  "properties": {
+    "receipt_id": {
+      "type": "string"
+    },
+    "receipt_type": {
+      "const": "jp-copyright-30-4-gate-receipt"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "jurisdiction": {
+      "const": "JP"
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "id",
+        "version",
+        "legal_basis"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "legal_basis": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "input_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "decision": {
+      "enum": [
+        "AUTO",
+        "REVIEW",
+        "DENY"
+      ]
+    },
+    "basis": {
+      "type": "string"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "code",
+          "result",
+          "message",
+          "legal_effect"
+        ],
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "result": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "UNKNOWN",
+              "WARN",
+              "INFO"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "legal_effect": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_record": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "provenance_manifest": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "disclaimer": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
