@@ -1,0 +1,72 @@
+policy_id: jp-copyright-article-30-4
+version: 0.1.2
+jurisdiction: JP
+legal_basis: Japan Copyright Act Article 30-4
+source_reviewed_at: 2026-09-13
+purpose: >-
+  Route a proposed use of a work through a narrow, auditable Article 30-4
+  profile. This policy does not determine overall legality and does not discover
+  or prove the actual training data of a specific AI model.
+
+decisions:
+  AUTO: supplied facts satisfy this profile or Article 30-4 is out of scope
+  REVIEW: a material fact or legal characterization is unresolved
+  DENY: this profile cannot authorize under Article 30-4 on supplied facts
+
+statutory_layers:
+  - id: non_enjoyment
+    description: >-
+      The use must not have a purpose of enjoying the ideas or emotions expressed
+      in the target work. A coexisting enjoyment purpose means this layer is not met.
+    subchecks:
+      - enjoyment_of_target_work == false
+      - intentional_reproduction_output_purpose != true
+      - coexisting_enjoyment_purpose == false
+    evidence_signals:
+      - incidental_similar_output_observed_is_not_dispositive
+      - frequent_common_expression_outputs_may_require_review
+      - user_prompt_attribution_can_negate_that_frequency_inference
+  - id: necessary_extent
+    test: within_necessary_extent == true
+  - id: no_unreasonable_prejudice
+    test: unreasonably_prejudices_rightsholder == false
+
+notes:
+  - information_analysis_is_example_not_exclusive_requirement
+  - deny_does_not_mean_unlawful_other_bases_may_apply
+  - source_legality_contract_privacy_and_other_laws_are_out_of_scope
+  - known_pirated_source_is_recorded_as_a_signal_not_a_standalone_statutory_element
+  - intentional_reproduction_output_purpose_concerns_protected_creative_expression_not_style_as_such
+  - isolated_similar_output_alone_does_not_establish_training_stage_enjoyment_purpose
+  - marked_frequency_of_common_creative_expression_outputs_can_trigger_review_as_indirect_evidence
+  - user_prompt_caused_frequency_does_not_itself_support_trainer_enjoyment_purpose
+  - provenance_is_preserved_but_not_independently_verified_by_this_gate
+
+official_sources:
+  - title: AI and Copyright
+    publisher: Agency for Cultural Affairs
+    url: https://www.bunka.go.jp/seisaku/chosakuken/aiandcopyright.html
+  - title: Approach to AI and Copyright
+    date: 2024-03-15
+    publisher: Copyright Subdivision, Cultural Council, Agency for Cultural Affairs
+    url: https://www.bunka.go.jp/seisaku/bunkashingikai/chosakuken/pdf/94037901_01.pdf
+  - title: FAQ on legal issues in cultural and artistic activities
+    publisher: Agency for Cultural Affairs
+    url: https://www.bunka.go.jp/seisaku/bunka_gyosei/kibankyoka/faq/index.html
+
+changelog:
+  - version: 0.1.2
+    change: >-
+      Reframed the policy as three statutory layers, with coexisting enjoyment
+      purpose treated as part of the non-enjoyment layer. Removed misleading
+      style-reproduction wording and tied the specific signal to
+      output of protected creative expression. Added marked-frequency and
+      user-prompt-attribution signals from the Agency's p.21 discussion, routing
+      unresolved/non-user-attributed marked frequency to REVIEW. Added an optional
+      provenance manifest preserved in receipts and an explicit non-goal that this
+      gate does not discover or prove any model's actual training data.
+  - version: 0.1.1
+    change: >-
+      Split the coexisting-enjoyment check into a specific
+      intentional_reproduction_output_purpose signal and a general/manual fallback.
+      Added incidental_similar_output_observed as informational-only context.
