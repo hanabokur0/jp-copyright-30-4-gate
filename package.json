@@ -1,0 +1,14 @@
+{
+  "name": "jp-copyright-30-4-gate",
+  "version": "0.1.2",
+  "description": "Deterministic policy gate and auditable receipt for Japan Copyright Act Article 30-4.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test",
+    "gate": "node src/cli.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
