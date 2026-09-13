@@ -1,0 +1,1 @@
+# jp-copyright-30-4-gate
