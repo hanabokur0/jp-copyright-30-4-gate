@@ -1,0 +1,40 @@
+{
+  "scope": {
+    "copyrighted_work": true,
+    "copyright_use_occurs": true
+  },
+  "conditions": {
+    "information_analysis": true,
+    "other_non_enjoyment_purpose": false,
+    "enjoyment_of_target_work": false,
+    "coexisting_enjoyment_purpose": false,
+    "within_necessary_extent": true,
+    "unreasonably_prejudices_rightsholder": false,
+    "intentional_reproduction_output_purpose": false
+  },
+  "source": {
+    "uri": "https://example.com/dataset-item",
+    "acquired_at": "2026-09-13T00:00:00Z",
+    "acquisition_method": "public-web"
+  },
+  "evidence": {
+    "known_pirated_source": false,
+    "ai_training_market_dataset": false,
+    "refs": [
+      "evidence://source-snapshot/001"
+    ]
+  },
+  "provenance": {
+    "schema_version": "0.1",
+    "content_hash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "source_uri": "https://example.com/dataset-item",
+    "acquired_at": "2026-09-13T00:00:00Z",
+    "acquisition_method": "public-web",
+    "source_type": "public_web",
+    "collector": "example-crawler-v0.1",
+    "declared_license": null,
+    "rights_holder_claim": null,
+    "retrieval_receipt": "evidence://source-snapshot/001",
+    "parent_refs": []
+  }
+}
