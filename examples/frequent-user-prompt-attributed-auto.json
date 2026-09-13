@@ -1,0 +1,20 @@
+{
+  "scope": {
+    "copyrighted_work": true,
+    "copyright_use_occurs": true
+  },
+  "conditions": {
+    "information_analysis": true,
+    "other_non_enjoyment_purpose": false,
+    "enjoyment_of_target_work": false,
+    "coexisting_enjoyment_purpose": false,
+    "intentional_reproduction_output_purpose": false,
+    "frequent_common_expression_outputs_observed": true,
+    "frequent_outputs_attributable_to_user_similarity_prompts": true,
+    "within_necessary_extent": true,
+    "unreasonably_prejudices_rightsholder": false
+  },
+  "context": {
+    "note": "Marked frequency is stated to result from users intentionally prompting for works similar to existing works. Under the Agency p.21 footnote, that fact does not itself support an inference that the trainer had an enjoyment purpose."
+  }
+}
