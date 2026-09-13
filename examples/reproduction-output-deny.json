@@ -1,0 +1,18 @@
+{
+  "scope": {
+    "copyrighted_work": true,
+    "copyright_use_occurs": true
+  },
+  "conditions": {
+    "information_analysis": true,
+    "other_non_enjoyment_purpose": false,
+    "enjoyment_of_target_work": false,
+    "coexisting_enjoyment_purpose": null,
+    "intentional_reproduction_output_purpose": true,
+    "within_necessary_extent": true,
+    "unreasonably_prejudices_rightsholder": false
+  },
+  "context": {
+    "note": "Additional training intentionally aimed at outputting creative expression contained in a small set of works depicting a specific character. The signal concerns protected creative expression, not mere similarity of style or ideas."
+  }
+}
